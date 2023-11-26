@@ -51,7 +51,7 @@ test.describe("index.html", () => {
     const p = page.locator("main > h1+p");
     await expect(p).toBeVisible();
     await expect(p).toHaveText(
-      "Esta é a página principal tem código JavaScript nela. Você só verá o resultado no console e durante a depuração."
+    "Esta é a página principal tem código JavaScript nela. Você só verá o resultado no console e durante a depuração."
     );
   });
 
