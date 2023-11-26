@@ -1,45 +1,53 @@
-let maria = 2;
+
 let joao = 1;
+let maria = 2;
 
-function getJoao() {
-  return joao;
+
+function setJoao(valor){
+   if(valor >=0)
+   {
+       joao = valor;
+   }else
+   {
+       joao = 0;
+   }
+
+
+}
+function setMaria(valor)
+{
+   if(valor >= 0)
+   {
+       maria = valor;
+   }else
+   {
+       maria = 0;
+   }
+
+
 }
 
-function getMaria() {
-  return maria;
+function getMaria()
+{
+   return maria;
 }
-function deJoaoParaMaria() {
-  
-  setMaria(getMaria() +getJoao());
-  setJoao(0);
-}
-
-function deMariaParaJoao() {
-  setJoao(getMaria() +getJoao());
-  setMaria(0);
+function getJoao()
+{
+   return joao;
 }
 
-function setJoao(novoValor) {
-  if (novoValor >= 0) {
-    joao = novoValor;
-  } else {
-    joao = 0;
-  }
-}
 
-function setMaria(novoValor) {
-  if (novoValor >= 0) {
-    maria = novoValor;
-  } else {
-    maria = 0;
-  }
-}
+function deMariaParaJoao()
+   {
+       joao = joao + maria;
+       maria = 0;
+   }
 
-export {
-  getJoao,
-  getMaria,
-  setJoao,
-  setMaria,
-  deMariaParaJoao,
-  deJoaoParaMaria,
-};
+   function deJoaoParaMaria()
+   {
+       maria = maria + joao;
+       joao = 0
+   }
+
+
+export {getJoao , getMaria, deJoaoParaMaria , deMariaParaJoao, setJoao, setMaria};
