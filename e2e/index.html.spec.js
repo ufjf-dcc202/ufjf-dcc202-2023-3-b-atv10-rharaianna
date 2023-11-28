@@ -58,7 +58,7 @@ test.describe("index.html", () => {
   test("Deve ter um script módulo na cabeça do documento para src/main.js.", async ({ page }) => {
     await page.goto(`http://localhost:5500`);
     const script = page.locator("head > script");
-    await expect(script).toHaveAttribute('src', 'src/main.js');
+    await expect(script).toHaveAttribute('src', './main.js');
     await expect(script).toHaveAttribute('type', 'module');
   });
 });
